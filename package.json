@@ -1,0 +1,28 @@
+{
+  "name": "kia-storm-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "bd": "./scripts/deploy",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.18.2",
+    "@astrojs/react": "^2.1.1",
+    "@astrojs/rss": "^2.3.2",
+    "@astrojs/sitemap": "^1.2.1",
+    "@types/react": "^18.0.32",
+    "@types/react-dom": "^18.0.11",
+    "astro": "^2.1.9",
+    "p5": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/p5": "^1.6.0"
+  }
+}

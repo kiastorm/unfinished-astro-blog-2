@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Define variables
+out_dir="htdocs"
+vps_user="kia"
+vps_ip="kiastorm.co.uk"
+vps_dir="/var/www"
+
+# Build Astro app with pnpm
+pnpm build
+
+# Sync files to remote VPS using rsync
+rsync -avz --delete $out_dir $vps_user@$vps_ip:$vps_dir/

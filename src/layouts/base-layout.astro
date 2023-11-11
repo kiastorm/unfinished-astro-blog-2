@@ -1,0 +1,61 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+
+const { title, description, showMobileNavigation } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="avatar" src="/me.jpg" alt="random image" />
+      <a class="title" href="/">Kia Storm</a>
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="about-me-list">
+        <li>
+          UI Engineer, leading the design system @ <a
+            href="https://www.singlestore.com/">SingleStore</a
+          >.
+        </li>
+        <li>
+          Previously:
+          <a href="https://www.ortto.com/">Ortto</a>,
+          <a href="https://www.terraquest.com/">TerraQuest</a>,
+          <a href="https://www.expressandstart.com/">Express &amp; Star</a>
+        </li>
+        <li>
+          Excited by music, MMA, learning, travel, tech independence, experience
+          design and generative systems
+        </li>
+      </ul>
+    </header>
+
+    {
+      showMobileNavigation && (
+        <nav class="mobile-navigation">
+          <a class="title" href="/">
+            Kia Storm
+          </a>
+          <ul>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
+          </ul>
+        </nav>
+      )
+    }
+    <main class="main">
+      <slot />
+    </main>
+  </body>
+</html>
